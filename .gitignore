@@ -3,7 +3,7 @@
 *.vcd
 build/
 obj_dir/
-
+*.exe
 # 如果 logisim-bin 里面是软件本体，建议忽略它
 # 取消下面这行的注释来忽略该文件夹
 # logisim-bin/
