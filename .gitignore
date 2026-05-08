@@ -1,0 +1,9 @@
+# 忽略编译产生的文件和波形文件
+*.o
+*.vcd
+build/
+obj_dir/
+
+# 如果 logisim-bin 里面是软件本体，建议忽略它
+# 取消下面这行的注释来忽略该文件夹
+# logisim-bin/
