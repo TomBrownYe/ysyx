@@ -1,0 +1,28 @@
+1、定义一个函数increment，它的作用是把传进来的参数加1。例如：
+
+void increment(int x)
+{
+	x = x + 1;
+}
+
+int main(void)
+{
+	int i = 1, j = 2;
+	increment(i); /* i now becomes 2 */
+	increment(j); /* j now becomes 3 */
+	return 0;
+}
+我们在main函数中调用increment增加变量i和j的值，这样能奏效吗？为什么？
+
+解答：请看code中的1.3.3.c程序的注释
+
+2、如果在一个程序中调用了printf函数却不包含头文件，例如：
+int main(void) { printf("\n"); }，
+编译时会报警告：
+warning: incompatible implicit declaration of built-in function ‘printf’。
+请分析错误原因。
+
+解答： 你在此处直接进行函数调用而并不先进行函数声明，编译器无法识别printf。
+正确做法应当是在头文件里面#include<stdio.h>,调用stdio.h这一标准库
+该标准库里有printf的函数定义，在头文件引用相当于在最开始对这一函数进行声明
+因为函数定义如果放在执行前面，其也起到一个函数声明的作用。
